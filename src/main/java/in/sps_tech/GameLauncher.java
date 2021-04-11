@@ -24,6 +24,7 @@ class GameLauncher {
         List<Cell> nextgeneration = universe.getNextGeneration();
         nextgeneration.forEach(System.out::println);
         System.out.println("======================================");
+
         seeds = new LinkedList<>();
         seeds.add(new Cell(0, 1));
         seeds.add(new Cell(1, 0));
@@ -33,6 +34,7 @@ class GameLauncher {
         nextgeneration = universe.getNextGeneration();
         nextgeneration.forEach(System.out::println);
         System.out.println("======================================");
+
         seeds = new LinkedList<>();
         seeds.add(new Cell(0, 1));
         seeds.add(new Cell(1, 0));
@@ -43,6 +45,7 @@ class GameLauncher {
         nextgeneration = universe.getNextGeneration();
         nextgeneration.forEach(System.out::println);
         System.out.println("======================================");
+
         seeds = new LinkedList<>();
         seeds.add(new Cell(1, 1));
         seeds.add(new Cell(1, 0));

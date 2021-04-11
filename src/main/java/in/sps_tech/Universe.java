@@ -39,10 +39,8 @@ class Universe {
     private void unPopulate(List<Cell> aliveCells, Cell seed) {
         int activeNeighbours = 0;
         List<Cell> neighbours = seed.getNeighbours();
-        activeNeighbours = neighbours.stream()
-                .filter(seeds::contains)
-                .collect(toList())
-                .size();
+        activeNeighbours = (int) neighbours.stream()
+                .filter(seeds::contains).count();
         if (activeNeighbours < 2 || activeNeighbours > 3) {
             aliveCells.remove(seed);
         }
@@ -53,10 +51,8 @@ class Universe {
         List<Cell> neighbours = seed.getNeighbours();
         for (Cell cell : neighbours) {
             List<Cell> cellNeighbour = cell.getNeighbours();
-            activeNeighbours = cellNeighbour.stream()
-                    .filter(seeds::contains)
-                    .collect(toList())
-                    .size();
+            activeNeighbours = (int) cellNeighbour.stream()
+                    .filter(seeds::contains).count();
             if (activeNeighbours == 3) {
                 if (!aliveCells.contains(cell)) {
                     aliveCells.add(cell);

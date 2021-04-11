@@ -10,6 +10,7 @@ import java.util.Objects;
 class Cell {
 
     private final int xCoordinate;
+
     private final int yCoordinate;
 
     /**
